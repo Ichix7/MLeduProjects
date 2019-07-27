@@ -1,0 +1,4 @@
+cities['is_city_saint_and_wide'] =  cities['City name'].apply(lambda name: name.startswith('San') & (cities['Area square miles'] > 50))
+cities
+
+cities.reindex([2, 1, 10, 7])
