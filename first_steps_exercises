@@ -1,0 +1,12 @@
+train_model(
+    learning_rate=0.00002,
+    steps=400,
+    batch_size=3
+)
+
+train_model(
+    learning_rate=0.00002,
+    steps=600,
+    batch_size=3,
+    input_feature="population"
+)
