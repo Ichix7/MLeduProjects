@@ -1,0 +1,21 @@
+Provided are some of the most Usefull things i have found in the training. Will mroe than likely be used inside projects!
+
+//we will use the pad_sequences function to standardize the lengths:
+train_data = keras.preprocessing.sequence.pad_sequences(train_data,
+                                                        value=word_index["<PAD>"],
+                                                        padding='post',
+                                                        maxlen=256)
+
+test_data = keras.preprocessing.sequence.pad_sequences(test_data,
+                                                       value=word_index["<PAD>"],
+                                                       padding='post',
+                                                       maxlen=256)
+                                                       
+//It may be useful to know how to convert integers back to text. 
+//Here, we'll create a helper function to query a dictionary object that contains the integer to string mapping:
+//The first indices are reserved
+word_index = {k:(v+3) for k,v in word_index.items()}
+word_index["<PAD>"] = 0
+word_index["<START>"] = 1
+word_index["<UNK>"] = 2  # unknown
+word_index["<UNUSED>"] = 3
